@@ -1,4 +1,4 @@
-all: clean build test run  install github-release github-release-dry-run goreleaser-dry-run
+all: clean build test run install goreleaser-release goreleaser-dry-run goreleaser-dry-run
 
 REPO_NAME = github.com/hoto/template-go-cli
 
@@ -23,12 +23,12 @@ run: clean build
 install: clean build
 	go install -v ./...
 
-github-release: clean dependencies
+goreleaser-release: clean dependencies
 	curl -sL https://git.io/goreleaser | VERSION=v0.137.0 bash
 
-github-release-dry-run: clean dependencies
+goreleaser-dry-run: clean dependencies
 	curl -sL https://git.io/goreleaser | VERSION=v0.137.0 bash -s -- --skip-publish --snapshot --rm-dist
 
-goreleaser-dry-run: dependencies
+goreleaser-dry-run-local: dependencies
 	goreleaser release --skip-publish --snapshot --rm-dist
 
