@@ -1,4 +1,4 @@
-name: Release - github, brew
+name: Goreleaser to GH releases and brew tap
 
 on:
   push:
