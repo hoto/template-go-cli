@@ -13,7 +13,7 @@ Github action will use `goreleaser` to automatically releases formula to homebre
     
 Mac:
 
-    brew install hoto/repo/template-go-cli
+    brew install hoto/homebrew-repo/template-go-cli
 
 Mac or Linux:
 
@@ -53,4 +53,7 @@ Install to global golang bin directory:
     make install
     template-go-cli
     
-    
+### Release
+
+Add a git tag and push it to GH. 
+GH action will pick it up and goreleaser will publish to https://github.com/hoto/homebrew-repo

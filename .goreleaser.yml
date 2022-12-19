@@ -8,6 +8,7 @@ builds:
     ignore:
       - goos: darwin
         goarch: 386
+
 archives:
   - format: binary
     replacements:
@@ -22,6 +23,7 @@ archives:
       linux: Linux
       amd64: x86_64
     format: zip
+
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -30,12 +32,15 @@ release:
   prerelease: auto
 changelog:
   sort: asc
+
 brews:
-  - github:
+  - tap:
       owner: hoto
       name: homebrew-repo
     folder: Formula
-    homepage:  https://github.com/hoto/template-go-cli
+    homepage: https://github.com/hoto/template-go-cli
     description: Golang CLI template.
+    ids:
+      - homebrew
     test: |
       system "#{bin}/template-go-cli --version"
