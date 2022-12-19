@@ -18,7 +18,7 @@ Mac:
 Mac or Linux:
 
     sudo curl -L \
-      "https://github.com/hoto/template-go-cli/releases/download/1.0.3/template-go-cli_1.0.3_$(uname -s)_$(uname -m)" \
+      "https://github.com/hoto/template-go-cli/releases/download/1.0.0/template-go-cli_1.0.0_$(uname -s)_$(uname -m)" \
        -o /usr/local/bin/template-go-cli
 
     sudo chmod +x /usr/local/bin/template-go-cli
